@@ -1,6 +1,6 @@
 # Urban Pulse Paris
 
-Worked on: January 2026
+Worked on: January 2026 --> April 2026
 
 Stack: Python, Airflow, AWS S3, dbt, Athena, Kafka, Docker, Terraform, FreatExpectations, Streamlit
 
