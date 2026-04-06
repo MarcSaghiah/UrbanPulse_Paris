@@ -1,5 +1,9 @@
 # Urban Pulse Paris
 
+Worked on: January 2026
+
+Stack: Python, Airflow, AWS S3, dbt, Athena, Kafka, Docker, Terraform, FreatExpectations, Streamlit
+
 Urban Pulse Paris is an example of an end-to-end data engineering project built on open data from Velib Metropole. The platform ingests operational data, stores it in a Medallion architecture on AWS S3, orchestrates transformations with Airflow, models analytics with dbt, validates data quality, and exposes KPI analytics through Athena.
 
 ## Objectives
@@ -298,7 +302,7 @@ CI workflow includes:
 - Configure S3 lifecycle policies for Bronze stream retention
 - Use least-privilege IAM for production
 
-## Portfolio Summary
+## Summary
 
 This project demonstrates a complete, production-inspired data engineering pipeline:
 
