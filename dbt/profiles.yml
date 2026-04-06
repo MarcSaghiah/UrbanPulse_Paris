@@ -1,0 +1,12 @@
+urban_pulse_paris:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: "s3://{{ env_var('ATHENA_RESULTS_BUCKET', 'urban-pulse-paris-athena-results') }}/"
+      region_name: "{{ env_var('AWS_REGION', 'eu-west-3') }}"
+      database: "AwsDataCatalog"
+      schema: "urban_pulse_paris"
+      work_group: "primary"
+      threads: 4
+

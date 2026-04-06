@@ -1,0 +1,45 @@
+.env
+.env.*
+!.env.example
+*.csv
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Airflow generated state
+airflow/logs/
+airflow/dags/output/
+
+# Local data snapshots
+data/raw/
+
+# dbt generated artifacts
+dbt/target/
+dbt/logs/
+
+# Streamlit local cache/state
+.streamlit/
+
+# Terraform local state
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!terraform.tfvars.example
+
+# Notebook/checkpoint noise
+.ipynb_checkpoints/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

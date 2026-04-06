@@ -1,0 +1,32 @@
+config_version: 3.0
+
+datasources:
+	velib_runtime:
+		class_name: Datasource
+		execution_engine:
+			class_name: PandasExecutionEngine
+		data_connectors:
+			runtime_connector:
+				class_name: RuntimeDataConnector
+				batch_identifiers:
+					- default_identifier_name
+
+stores:
+	expectations_store:
+		class_name: ExpectationsStore
+		store_backend:
+			class_name: TupleFilesystemStoreBackend
+			base_directory: expectations/
+
+	validations_store:
+		class_name: ValidationsStore
+		store_backend:
+			class_name: TupleFilesystemStoreBackend
+			base_directory: uncommitted/validations/
+
+expectations_store_name: expectations_store
+validations_store_name: validations_store
+
+checkpoint_store_name: checkpoint_store
+plugins_directory: plugins/
+

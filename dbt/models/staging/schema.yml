@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: gold
+    database: AwsDataCatalog
+    schema: urban_pulse_paris
+    tables:
+      - name: velib_kpis_station_snapshot
+
+models:
+  - name: stg_velib_kpis
+    columns:
+      - name: collected_at_utc
+        tests: [not_null]
+      - name: station_count
+        tests: [not_null]
+  - name: int_velib_kpis_enriched
+    columns:
+      - name: active_station_ratio
+        tests:
+          - not_null
+  - name: mart_velib_hourly_kpis
+    columns:
+      - name: hour_ts
+        tests:
+          - unique
+          - not_null

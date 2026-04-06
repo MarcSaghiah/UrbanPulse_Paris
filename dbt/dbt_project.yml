@@ -1,0 +1,26 @@
+name: "urban_pulse_paris"
+version: "1.0.0"
+config-version: 2
+
+profile: "urban_pulse_paris"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  urban_pulse_paris:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+

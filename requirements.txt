@@ -1,0 +1,12 @@
+cryptography
+python-dotenv
+requests
+boto3
+pandas
+pyarrow
+kafka-python
+great_expectations
+pyspark
+dbt-core
+dbt-athena-community
+streamlit

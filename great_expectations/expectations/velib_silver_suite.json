@@ -1,0 +1,32 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "velib_silver_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "station_id"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "num_bikes_available",
+        "min_value": 0,
+        "max_value": 200
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "num_docks_available",
+        "min_value": 0,
+        "max_value": 200
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "notes": "Baseline quality suite for Velib silver data"
+  }
+}

@@ -1,0 +1,17 @@
+name: urban_pulse_checkpoint
+config_version: 1.0
+
+class_name: Checkpoint
+run_name_template: "%Y%m%d-%H%M%S-urban-pulse"
+
+validations:
+	- batch_request:
+			datasource_name: velib_runtime
+			data_connector_name: runtime_connector
+			data_asset_name: velib_silver_snapshot
+			runtime_parameters:
+				path: ../airflow/dags/output/velib
+			batch_identifiers:
+				default_identifier_name: default_batch
+		expectation_suite_name: velib_silver_suite
+
